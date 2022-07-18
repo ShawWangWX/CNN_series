@@ -13,11 +13,8 @@ import torch
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
-import torchvision
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
-
-from matplotlib import pyplot as plt
 
 
 def data_loader(path: str, batch_size=64):
@@ -57,9 +54,9 @@ if __name__ == '__main__':
 
     img, label = next(iter(train_loader))
     print(img.size())
-    #images = torchvision.utils.make_grid(img)
+    # images = torchvision.utils.make_grid(img)
 
-    #images = images.numpy().transpose((1, 2, 0))
+    # images = images.numpy().transpose((1, 2, 0))
 
     '''
     plt.figure("MNIST batch sample")
